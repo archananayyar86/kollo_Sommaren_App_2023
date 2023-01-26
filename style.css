@@ -374,6 +374,7 @@ nav .nav-bar .logo a {
   .row {
     display: flex;
     flex-direction: column;
+    margin-left: 30px;
   }
 
   .styled-table {
