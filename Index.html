@@ -1,0 +1,201 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kollo Sommaren</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<nav>
+    <div class="nav-bar">
+        <i class='bx bx-menu sidebarOpen'></i>
+        <span class="logo navLogo"><a href="#">Kollo Sommaren 2023 </a></span>
+    </div>
+</nav>
+<!-- Populära aktiviteter -->
+
+<div class="container">
+    <div class="heading">
+        <h1>Populära aktiviteter</h1>
+    </div>
+    <div class="row">
+        <div class="card">
+            <div class="card-header">
+                <img src="images/mat.jpg" width="50" height="50" alt="">
+            </div>
+            <div class="card-body">
+                <h3 class="title">Matlagning</h3>
+                <p>
+                    Vi lagar mat och har rolight tillsamman
+                </p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <img src="images/nedladdning.jpg" width="50" height="50" alt="">
+            </div>
+            <div class="card-body">
+                <h3 class="title">Lekar</h3>
+                <p>
+                    Roliga lekar både ute och inomhus
+                </p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <img src="images/Slöjd.jpg" width="50" height="50" alt="">
+            </div>
+            <div class="card-body">
+                <h3 class="title">Slöjd</h3>
+                <p>
+                    Träslöjd och syslöjd i fina nya lokaler
+                </p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <img src="images/idrott.png" width="50" height="50" alt="">
+            </div>
+            <div class="card-body">
+                <h3 class="title">Idrott</h3>
+                <p>
+                    Testa på olika idrott och sport.
+                </p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<section class="container-form">
+
+    <form id="form" class="form">
+        <!-- Section Personuppgifter-->
+        <section>
+            <h3 class="title">Anmäl dig till kollo</h3>
+            <h4 class="title">Personuppgifter</h4>
+            <!-- USERNAME -->
+            <div class="input-group ">
+                <label for="username">Namn *</label>
+                <input type="text" id="username" name="username" placeholder="skapa Namn" />
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <p></p>
+            </div>
+
+            <div class="input-group ">
+                <label for="email">E-post *</label>
+                <input type="email" name="email " id="email" placeholder="Skapa E-post" />
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <p></p>
+            </div>
+
+            <div class="column">
+                <div class="Select">
+                    <label for="age">Ålder</label>
+                    <div class="column">
+                        <div class="select-box">
+                            <select class="form-control" name="age" id="age">
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <br>
+        <!-- Section  intresse -->
+        <section>
+            <h4 class="title">Dina intresserad</h4>
+            <div class="column">
+                <div class="input-group ">
+                    <label for="">Jag är intresserad av *</label>
+                    <input type="text" name="interest" onkeypress="enterPress(event)" id="interestInput"
+                        placeholder="" />
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <p>test</p>
+                </div>
+                <input type="button" onclick="pushData()" value="+" id="add" />
+            </div>
+            <div id="listItem">
+                <table class="styled-table" id="dataView"></table>
+            </div>
+        </section>
+        <br>
+        <!-- Section boende -->
+        <section>
+            <h4 class="title">Boende</h4>
+            <div class="rum-box">
+                <h3>Kan du tänka dig att deta rum</h3>
+                <div class="rum-option">
+                    <div class="rum">
+                        <input type="radio" id="check-male" name="rum" onclick="typRum(0)" />
+                        <label for="check-male">Ja</label>
+                    </div>
+                    <div class="rum">
+                        <input type="radio" id="check-female" name="rum" onclick="typRum(1)" />
+                        <label for="check-female">Nej</label>
+                    </div>
+                </div>
+            </div>
+            <div class="" id="typeOfRum">
+                <div class="rum-box">
+                    <h3>Typ av rum</h3>
+                    <div class="rum-option">
+                        <div class="rum">
+                            <input type="radio" id="check" name="rum-f" />
+                            <label for="check-mf">Blandat</label>
+                        </div>
+                        <div class="rum">
+                            <input type="radio" id="check-f" name="rum-f" />
+                            <label for="check-f">Bara tjejer</label>
+                        </div>
+                        <div class="rum">
+                            <input type="radio" id="check-m" name="rum-f" />
+                            <label for="check-m">Bara Killar</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="rum-box">
+                <h3>Jag kan ta med</h3>
+                <div class="rum-option">
+                    <div class="rum">
+                        <input type="checkbox" id="check-s" name="rum" />
+                        <label for="check-s">Sovsäck</label>
+                    </div>
+                    <div class="rum">
+                        <input type="checkbox" id="check-k" name="rum" />
+                        <label for="check-k">Kudde</label>
+                    </div>
+                    <div class="rum">
+                        <input type="checkbox" id="check-l" name="rum" />
+                        <label for="check-l">Liggunderlog</label>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div>
+            <button type="submit" class="submit">Skicka in anmälan</button>
+            <div class="popup" id="popup">
+                <img src="./images/R.png">
+                <h2>Tack</h2>
+                <p> Dina uppgifter har skickats in Tack!!</p>
+                <button type="button" onclick="closePopup()">OK</button>
+            </div>
+        </div>
+
+    </form>
+</section>
+</body>
+
+<script defer src="script.js"></script>
+
+</html>

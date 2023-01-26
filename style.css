@@ -1,0 +1,371 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Nav Bar  */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 70px;
+  width: 100%;
+  background-color: var(--nav-color);
+  z-index: 100;
+}
+
+nav .nav-bar {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(196, 207, 227);
+  margin: 0 auto;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+}
+
+nav .nav-bar .logo a {
+  font-size: 25px;
+  font-weight: 500;
+  color: black;
+  text-decoration: none;
+}
+
+/* End NavBar */
+
+/* Flex Box */
+.row {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 10%;
+}
+
+.card {
+  width: 180px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+
+.card-heading {
+  text-align: center;
+  padding: 50px 10px;
+}
+
+.card-header img {
+  align-items: center;
+  width: 100%;
+  height: inherit;
+}
+
+.card-body {
+  padding: 20px 19px;
+  font-size: 14px;
+}
+
+.heading {
+  text-align: left;
+  font-size: 14px;
+}
+
+/* End Box */
+
+/* form */
+#form {
+  width: 600px;
+  padding: 20px;
+  margin-top: 30px;
+  border: 1px solid gray;
+  margin-left: 30px;
+}
+
+.title {
+  margin-bottom: 20px;
+}
+
+.input-group {
+  margin: 11px 0;
+  position: relative;
+}
+
+.input-group label {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.input-group input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+}
+
+.error input {
+  border: 3px red solid;
+}
+
+.success input {
+  border: 3px green solid;
+}
+
+.input-group i {
+  position: absolute;
+  right: 10px;
+  top: 35px;
+  visibility: hidden;
+}
+
+.liItem i {
+  position: relative;
+  right: 180px;
+  top: 35px;
+}
+
+.success i.fa-check-circle {
+  visibility: visible;
+  color: green;
+}
+
+.error i.fa-exclamation-circle {
+  visibility: visible;
+  color: red;
+}
+
+
+.input-group p {
+  font-size: 15px;
+  color: red;
+  visibility: hidden;
+}
+
+.error p {
+  visibility: visible;
+}
+
+.form .Select {
+  margin-top: 20px;
+}
+
+.form :where(.input-box input, .select-box) {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  outline: none;
+  font-size: 1rem;
+  color: #707070;
+  margin-top: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 0 15px;
+}
+
+.select-box select {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  color: #707070;
+  font-size: 1rem;
+}
+
+.form .column {
+  display: flex;
+  column-gap: 15px;
+}
+
+.form .rum-box {
+  margin-top: 20px;
+}
+
+.rum-box h3 {
+  color: #333;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+
+.form :where(.rum-option, .rum) {
+  display: flex;
+  align-items: center;
+  column-gap: 50px;
+  flex-wrap: wrap;
+}
+
+.form .rum {
+  column-gap: 5px;
+}
+
+.rum input {
+  accent-color: rgb(41, 40, 46);
+}
+
+.form :where(.rum input, .rum label) {
+  cursor: pointer;
+}
+
+.rum label {
+  color: #707070;
+}
+
+.address :where(input, .select-box) {
+  margin-top: 15px;
+}
+
+.select-box select {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  color: #707070;
+  font-size: 1rem;
+}
+
+.form #add {
+  background: #333;
+  border: none;
+  font-size: 20px;
+  color: #fff;
+  padding: 1px;
+  text-align: center;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 7px -5px 54px -5px;
+  position: relative;
+  margin-top: 43px;
+
+}
+
+.form .submit {
+  height: 55px;
+  padding: 10px;
+  width: 50%;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: 30px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: #232121;
+}
+
+.form .submit :hover {
+  background: #707070;
+}
+
+/*  End form*/
+
+.liItem {
+  margin-top: -25px;
+  padding: 10px;
+  width: 35%;
+  border: 0.5px solid black;
+}
+
+#view li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* popup  */
+.popup {
+  width: 400px;
+  background: rgb(227, 223, 223);
+  position: absolute;
+  top: 0;
+  left: 50%;
+  border-radius: 6px;
+  transform: translate(-50%, -50%) scale(0.1);
+  text-align: center;
+  padding: 20px 30px 30px;
+  color: #333;
+  visibility: hidden;
+  transition: transform 0.4s, top 0.4s;
+}
+
+.open-Popup {
+  visibility: visible;
+  top: 110%;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.popup img {
+  width: 100px;
+  margin-top: -50px;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.popup h2 {
+  font-size: 28px;
+  font-weight: 400;
+  margin: 30px 0 10px;
+}
+
+.popup button {
+  width: 100%;
+  margin-top: 50px;
+  padding: 10px 0;
+  background: #1b1414;
+  color: #fff;
+  outline: none;
+  font-size: 18px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* interest table  */
+.styled-table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.styled-table thead tr {
+  background-color: #009879;
+  color: #ffffff;
+  text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+  padding: 12px 15px;
+}
+
+.styled-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+
+/* End table  */
+
+/*Responsive*/
+@media screen and (max-width: 500px) {
+  .form .column {
+    flex-wrap: wrap;
+  }
+
+  .form :where(.rum-option, .rum) {
+    row-gap: 15px;
+  }
+}
